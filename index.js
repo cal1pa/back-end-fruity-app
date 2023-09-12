@@ -1,4 +1,5 @@
-//importing express
+//importing 
+require('dotenv').config()
 const express = require("express");
 const cors = require('cors')
 
@@ -6,9 +7,11 @@ const cors = require('cors')
 const app = express();
 
 // Above 1024 as everything below that is reserved
-const port = 3000;
 
-//importing datanased
+//process.env.PORT
+const port = process.env.PORT;
+
+//importing database
 const fruits = require('./fruits.json')
 
 
